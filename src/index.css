@@ -21,5 +21,7 @@
 }
 
 body {
-  background-color: var(--black);
+  background-image: radial-gradient(65% 50% at bottom center, var(--red), var(--black));
+  background-attachment: fixed;
+  /* background-color: var(--black); */
 }

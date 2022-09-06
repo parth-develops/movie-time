@@ -1,3 +1,50 @@
 .movie-info-container {
   display: flex;
+  gap: 64px;
+  max-width: 1280px;
+  margin: auto;
 }
+
+.movie-poster {
+  width: 35%;
+}
+
+.movie-poster img {
+  width: 100%;
+}
+
+.movie-details {
+  width: 75%;
+}
+
+.genres {
+  display: flex;
+  gap: 8px;
+}
+
+.genres li {
+  color: var(--maroon);
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 500px;
+  font-weight: 600;
+  font-family: var(--font-merriweather);
+}
+
+ul {
+  list-style: none;
+}
+
+.movie-title {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.movie-details >:not(:last-child) {
+  padding-bottom: 24px;
+} 
