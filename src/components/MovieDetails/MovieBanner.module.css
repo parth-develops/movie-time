@@ -1,0 +1,9 @@
+.movie-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-banner img {
+  max-width: 1280px;
+}
