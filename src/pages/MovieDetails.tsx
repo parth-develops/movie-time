@@ -1,5 +1,5 @@
 import React from "react";
-import MovieBanner from "./MovieBanner";
+import MovieBanner from "../components/MovieBanner";
 import classes from './MovieDetails.module.css';
 
 const MovieDetails = () => {
