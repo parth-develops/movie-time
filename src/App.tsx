@@ -1,11 +1,13 @@
-import React from 'react';
-import classes from './App.module.css';
-import MovieDetails from './pages/MovieDetails';
+import React from "react";
+import classes from "./App.module.css";
+import Home from "./pages/Home";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
   return (
     <div className={classes.App}>
-      <MovieDetails />      
+      <Home />
+      {/* <MovieDetails />       */}
     </div>
   );
 }

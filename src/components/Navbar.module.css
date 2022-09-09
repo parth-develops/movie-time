@@ -1,0 +1,37 @@
+.nav {
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  width: 100%;
+  height: 7vh;
+  border-bottom: 1px solid var(--dark-grey);
+}
+.a {
+  text-decoration: none;
+  color: inherit;
+}
+.li {
+  cursor: pointer;
+}
+.li:hover {
+  color: var(--red);
+  transition: 200ms;
+}
+.input {
+  width: 30vw;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  border: solid 2px var(--black);
+  font-size: 0.8rem;
+}
+.input:focus {
+  outline: none;
+  border: solid 2px var(--red);
+}
+.ul {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+}
