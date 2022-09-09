@@ -28,4 +28,5 @@ body {
   );
   background-attachment: fixed;
   /* background-color: var(--black); */
+  overflow-x: hidden;
 }
