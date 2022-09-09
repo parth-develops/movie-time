@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 :root {
   /* Color palette */
-  --red: #DB0000;
+  --red: #db0000;
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #ffffff;
   --dark-grey: #564d4d;
   --maroon: #831010;
 
   /* Fonts */
-  --font-poppins: 'Poppins', sans-serif;
-  --font-merriweather: 'Merriweather', serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-merriweather: "Merriweather", serif;
 }
 
 * {
@@ -21,7 +21,11 @@
 }
 
 body {
-  background-image: radial-gradient(65% 50% at bottom center, var(--red), var(--black));
+  background-image: radial-gradient(
+    65% 50% at bottom center,
+    var(--red),
+    var(--black)
+  );
   background-attachment: fixed;
   /* background-color: var(--black); */
 }

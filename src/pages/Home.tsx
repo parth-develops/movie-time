@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-// import PopularMovieBanner from "../components/PopularMovieBanner";
+import PopularMovieBanner from "../components/PopularMovieBanner";
 
 // type Props = {};
 
@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      {/* <PopularMovieBanner /> */}
+      <PopularMovieBanner />
     </>
   );
 }
