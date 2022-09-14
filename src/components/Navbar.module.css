@@ -35,6 +35,7 @@
   display: flex;
   gap: 1rem;
   list-style-type: none;
+  font-family: inherit;
 }
 @media screen and (min-width: 768px) {
   .ul {
