@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./PopularMovieBanner.module.css";
+import { Link } from "react-router-dom";
 // type Props = {}
 
 function PopularMovieBanner() {
@@ -8,6 +9,7 @@ function PopularMovieBanner() {
       <img
         src="https://hips.hearstapps.com/pop.h-cdn.co/assets/17/26/1600x800/landscape-1498738748-spoder.jpg?resize=980:*"
         className={styles.img}
+        alt="Current Movie Banner"
       />
       <div className={styles.headerText}>
         <h1 className={styles.HeaderHeadline}>Movie Of The week</h1>
@@ -18,7 +20,9 @@ function PopularMovieBanner() {
           from Doctor Strange the stakes become even more dangerous, forcing him
           to discover what it truly means to be Spider-Man.
         </p>
-        <button className={styles.HeaderButton}>See Detail</button>
+        <Link to="/detail">
+          <button className={styles.HeaderButton}>See Detail</button>
+        </Link>
       </div>
     </div>
   );

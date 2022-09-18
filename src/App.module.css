@@ -3,14 +3,6 @@
   margin: auto;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: var(--font-poppins);
-}
-
-p {
-  font-family: var(--font-merriweather);
-}
-
 section {
   margin: 108px 0;
 }
