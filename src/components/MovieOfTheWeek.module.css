@@ -2,9 +2,7 @@
   font-family: inherit;
   color: var(--white);
   position: relative;
-
   margin: 1rem 1rem;
-
   margin: 1rem 2rem;
   overflow: hidden;
   height: 70vh;
@@ -15,31 +13,28 @@
 .img {
   width: 100%;
   height: auto;
-
   border: none;
-  opacity: 0.7;
+  opacity: 0.55;
 }
 
-.headerText {
-  
-  font-family: inherit;
+.movieInfo {
+  position: absolute;
+  bottom: 10%;
+  left: 2%;
   display: flex;
-  border-radius: 1rem;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .HeaderHeadline {
+  text-transform: uppercase;
   position: absolute;
   top: 5%;
-  left: 5%;
+  right: 5%;
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: rgba(198, 194, 194, 0.641);
+  color: var(--white);
 }
 
 .HeaderMovieName {
@@ -49,10 +44,9 @@
 
 .HeaderParagraph {
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.90rem;
   width: 55%;
   line-height: 150%;
-  /* background-color: rgb(181, 213, 241); */
   margin-top: 0.5rem;
   color: rgb(198, 194, 194);
 }
@@ -79,7 +73,6 @@
     font-size: 3rem;
     letter-spacing: 0.1rem;
     position: absolute;
-    color: rgba(198, 194, 194, 0.641);
   }
 
   .HeaderMovieName {
@@ -97,7 +90,6 @@
   .HeaderHeadline {
     font-size: 1rem;
     letter-spacing: 0.1rem;
-    color: rgba(198, 194, 194, 0.641);
   }
 
   .HeaderMovieName {
@@ -106,6 +98,6 @@
   }
 
   .HeaderParagraph {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import PopularMovieBanner from "../components/PopularMovieBanner";
 import PopularMovies from "../components/PopularMovies";
+import MovieOfTheWeekBanner from "../components/MovieOfTheWeek";
 
 interface MovieOfTheWeekProp {
+  id: number
   title: string,
   overview: string,
   movieBanner: string
 }
 
 function Home() {
-  const [movieOfTheWeek, setMovieOfTheWeek] = useState<MovieOfTheWeekProp>({ title: '', overview: '', movieBanner: '' });
+  const [movieOfTheWeek, setMovieOfTheWeek] = useState<MovieOfTheWeekProp>({ id: 0, title: '', overview: '', movieBanner: '' });
+
   useEffect(() => {
     fetchMovieOfTheWeek();
   }, []);
@@ -21,17 +23,16 @@ function Home() {
     const { results } = data;
     console.log(results);
 
-    const { title, overview, backdrop_path: movieBanner } = results[0];
-    setMovieOfTheWeek({ title, overview, movieBanner });
+    const { id, title, overview, backdrop_path: movieBanner } = results[0];
+    setMovieOfTheWeek({ id, title, overview, movieBanner });
   };
 
   console.log(movieOfTheWeek);
 
-
   return (
     <>
       <Navbar />
-      <PopularMovieBanner movieOfTheWeek={movieOfTheWeek} />
+      <MovieOfTheWeekBanner movieOfTheWeek={movieOfTheWeek} />
       <PopularMovies />
     </>
   );
