@@ -36,13 +36,10 @@ function useProvideMovieContext() {
 
     const { backdrop_path: movieBanner, poster_path: moviePoster, title: movieTitle, overview: plot, genres, vote_average: rating } = data;
 
-    setCurrentMovie((prevObj) => {
-     return { movieBanner, moviePoster, movieTitle, plot, genres, rating }
-    }
-    );
+    setCurrentMovie({ movieBanner, moviePoster, movieTitle, plot, genres, rating });
   };
 
-  
+
 
   return { currentMovie, fetchCurrentMovie };
 }
