@@ -3,8 +3,7 @@ import { useCurrentMovieContext } from './contexts';
 
 const MovieInfo = () => {
   const { currentMovie } = useCurrentMovieContext();
-  console.log(currentMovie?.moviePoster);
-  
+
   return (
     <section className={classes.MovieInfo}>
       <div className={classes['movie-info-container']}>
@@ -27,11 +26,11 @@ const MovieInfo = () => {
           </div>
           <div className="rating">
             <h4>IMBD RATING</h4>
-            <p>{currentMovie?.rating}</p>
+            <p>{currentMovie?.rating?.toFixed(1)}</p>
           </div>
           <div className='extra-info'>
             <h4>DIRECTOR</h4>
-            <p>Jared Stern</p>
+            <p>{currentMovie?.directors?.join(', ')}</p>
           </div>
         </div>
       </div>
