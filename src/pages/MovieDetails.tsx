@@ -1,6 +1,6 @@
 import MovieBanner from "../components/MovieBanner";
 import MovieInfo from "../components/MovieInfo";
-import classes from './MovieDetails.module.css';
+import classes from "./MovieDetails.module.css";
 import Navbar from "../components/Navbar";
 
 const MovieDetails = () => {
@@ -8,7 +8,7 @@ const MovieDetails = () => {
     <div className={classes.MovieDetails}>
       <Navbar />
       <MovieBanner />
-      <MovieInfo/>
+      <MovieInfo />
     </div>
   );
 };

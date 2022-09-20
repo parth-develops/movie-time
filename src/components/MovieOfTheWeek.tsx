@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import React, { FC } from "react";
 import styles from "./MovieOfTheWeek.module.css";
 import { Link } from "react-router-dom";
-import { useCurrentMovieContext } from './contexts';
-=======
-import React, { useContext } from "react";
-import styles from "./MovieOfTheWeek.module.css";
-import { Link } from "react-router-dom";
-import { CurrentMovieFetcher } from "./CurrentMovieContext";
->>>>>>> 5e93bdb (BEFORE Movie Details Completed~)
+import { useCurrentMovieContext } from "./contexts";
 
-interface movieOfTheWeek {
+interface movieOftheWeek {
   id: number;
   title: string;
   overview: string;
@@ -18,16 +11,11 @@ interface movieOfTheWeek {
 }
 
 interface YourComponentProps {
-  movieOfTheWeek: movieOfTheWeek;
+  movieOfTheWeek: movieOftheWeek;
 }
 
-<<<<<<< HEAD
 const MovieOfTheWeekBanner = ({ movieOfTheWeek }: YourComponentProps) => {
   const { currentMovie, fetchCurrentMovie } = useCurrentMovieContext();
-=======
-function MovieOfTheWeekBanner({ movieOfTheWeek }: YourComponentProps) {
-  const CurrentMovieObj = useContext(CurrentMovieFetcher);
->>>>>>> 5e93bdb (BEFORE Movie Details Completed~)
 
   return (
     <div className={styles.popularMovie}>
@@ -41,20 +29,16 @@ function MovieOfTheWeekBanner({ movieOfTheWeek }: YourComponentProps) {
         <h2 className={styles.HeaderMovieName}>{movieOfTheWeek.title}</h2>
         <p className={styles.HeaderParagraph}>{movieOfTheWeek.overview}</p>
         <Link to="/detail">
-<<<<<<< HEAD
-          <button className={styles.HeaderButton} onClick={() => fetchCurrentMovie(movieOfTheWeek.id)} >
-=======
           <button
             className={styles.HeaderButton}
-            onClick={CurrentMovieObj.fetchCurrentMovieInfo(movieOfTheWeek.id)}
+            onClick={() => fetchCurrentMovie(movieOfTheWeek.id)}
           >
->>>>>>> 5e93bdb (BEFORE Movie Details Completed~)
             See Detail
           </button>
         </Link>
       </div>
     </div>
   );
-}
+};
 
 export default MovieOfTheWeekBanner;
