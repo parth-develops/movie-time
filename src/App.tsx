@@ -2,17 +2,9 @@ import React from 'react';
 import classes from "./App.module.css";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
-import CurrentMovieContext from './components/CurrentMovieContext';
+import {CurrentMovieContext} from './components/contexts';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-const fetchCurrentMovieInfo = async (id: number) => {
-
-}
-
-const currentMovieCaller = {
-  fetchCurrentMovieInfo
-}
 
 function App() {
   return (

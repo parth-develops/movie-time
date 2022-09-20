@@ -1,6 +1,6 @@
 import React from "react";
 
-const CurrentMovieContext = React.createContext({
+export const CurrentMovieContext = React.createContext({
   movieBanner: '',
   moviePoster: '',
   movieTitle: '',
@@ -9,5 +9,3 @@ const CurrentMovieContext = React.createContext({
   rating: 0,
   director: ''
 });
-
-export default CurrentMovieContext;

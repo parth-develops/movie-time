@@ -28,7 +28,7 @@ function MovieOfTheWeekBanner({ movieOfTheWeek }: YourComponentProps) {
           {movieOfTheWeek.overview}
         </p>
         <Link to="/detail">
-          <button className={styles.HeaderButton} onClick={fetchCurrentMovieInfo} >See Detail</button>
+          <button className={styles.HeaderButton} onClick={} >See Detail</button>
         </Link>
       </div>
     </div>
