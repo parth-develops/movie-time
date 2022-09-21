@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import classes from "./App.module.css";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
-import ProvideCurrentMovie from './components/contexts';
+import ProvideCurrentMovie from "./components/contexts";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

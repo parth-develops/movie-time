@@ -1,17 +1,17 @@
 import React, { FC } from "react";
 import styles from "./MovieOfTheWeek.module.css";
 import { Link } from "react-router-dom";
-import { useCurrentMovieContext } from './contexts';
+import { useCurrentMovieContext } from "./contexts";
 
 interface movieOftheWeek {
-  id: number
-  title: string
-  overview: string
-  movieBanner: string
+  id: number;
+  title: string;
+  overview: string;
+  movieBanner: string;
 }
 
 interface YourComponentProps {
-  movieOfTheWeek: movieOftheWeek
+  movieOfTheWeek: movieOftheWeek;
 }
 
 const MovieOfTheWeekBanner = ({ movieOfTheWeek }: YourComponentProps) => {
@@ -27,17 +27,18 @@ const MovieOfTheWeekBanner = ({ movieOfTheWeek }: YourComponentProps) => {
       <h1 className={styles.HeaderHeadline}>Movie Of The week</h1>
       <div className={styles.movieInfo}>
         <h2 className={styles.HeaderMovieName}>{movieOfTheWeek.title}</h2>
-        <p className={styles.HeaderParagraph}>
-          {movieOfTheWeek.overview}
-        </p>
+        <p className={styles.HeaderParagraph}>{movieOfTheWeek.overview}</p>
         <Link to="/detail">
-          <button className={styles.HeaderButton} onClick={() => fetchCurrentMovie(movieOfTheWeek.id)} >
+          <button
+            className={styles.HeaderButton}
+            onClick={() => fetchCurrentMovie(movieOfTheWeek.id)}
+          >
             See Detail
           </button>
         </Link>
       </div>
     </div>
   );
-}
+};
 
 export default MovieOfTheWeekBanner;
