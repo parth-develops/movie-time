@@ -1,11 +1,10 @@
 import MovieCard from "./MovieCard";
 import styles from "./PopularMovies.module.css";
 
-import { popularMovieType, resultObj } from "../type";
+import { popularMovieType, popularMovieResultObj } from "../type";
 
 // Custom Hook
 import { usePopularMovies } from "../hooks/usePopularMovies";
-import { stringify } from "querystring";
 
 function PopularMovies() {
   const popularMovies = usePopularMovies();

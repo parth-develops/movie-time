@@ -18,7 +18,7 @@ export interface CurrentMovieContext {
   fetchCurrentMovie: (id: number) => Promise<void>;
 }
 
-interface resultObj {
+interface popularMovieResultObj {
   title: string;
   vote_average?: number;
   poster_path?: string | null;
@@ -26,5 +26,5 @@ interface resultObj {
 }
 export interface popularMovieType {
   page: number;
-  results: [resultObj];
+  results: [popularMovieResultObj];
 }

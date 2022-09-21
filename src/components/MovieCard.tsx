@@ -1,10 +1,15 @@
 import styles from "./MovieCard.module.css";
 import { AiFillStar } from "react-icons/ai";
-import { resultObj } from "../type";
+import { popularMovieResultObj } from "../type";
 
-function MovieCard({ id, title, vote_average, poster_path }: resultObj) {
+function MovieCard({
+  id,
+  title,
+  vote_average,
+  poster_path,
+}: popularMovieResultObj) {
   return (
-    <div className={styles.movieCard}>
+    <div className={styles.movieCard} key={id}>
       <img
         className={styles.img}
         src={`https://image.tmdb.org/t/p/original${poster_path}`}
