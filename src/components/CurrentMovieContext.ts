@@ -23,7 +23,7 @@ const CurrentMovieObj = {
       `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_TMBD_API_KEY}&language=en-US`
     );
     const data = await response.json();
-    console.log("CurrentMovie", data);
+    // console.log("CurrentMovie", data);
     const {
       backdrop_path: movieBanner,
       poster_path: moviePoster,
