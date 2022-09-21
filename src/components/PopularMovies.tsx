@@ -1,22 +1,18 @@
 import MovieCard from "./MovieCard";
 import styles from "./PopularMovies.module.css";
 
-import { popularMovieType, popularMovieResultObj } from "../type";
-
 // Custom Hook
 import { usePopularMovies } from "../hooks/usePopularMovies";
 
 function PopularMovies() {
-  const popularMovies = usePopularMovies();
-
-  const { page, results } = popularMovies;
+  const {popularMovieResults, loadMore} = usePopularMovies();
 
   return (
     <div className={styles.popularMovies}>
       <h1 className={styles.popularMovieTitle}>Popular Movies</h1>
       <div className={styles.popularMoviesRow}>
         <>
-          {results?.map((result) => {
+          {popularMovieResults?.map((result) => {
             let { title, vote_average, poster_path, id } = result;
             return (
               <MovieCard
@@ -24,12 +20,13 @@ function PopularMovies() {
                 title={title}
                 vote_average={vote_average}
                 poster_path={poster_path}
+                id={id}
               />
             );
           })}
         </>
       </div>
-      <button className={styles.loadMore}>Load More...</button>
+      <button className={styles.loadMore} onClick={loadMore}>Load More</button>
     </div>
   );
 }

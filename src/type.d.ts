@@ -17,14 +17,10 @@ export interface CurrentMovieContext {
   currentMovie?: CurrentMovie;
   fetchCurrentMovie: (id: number) => Promise<void>;
 }
-
+// we cannot update methods in an object
 interface popularMovieResultObj {
   title: string;
   vote_average?: number;
   poster_path?: string | null;
   id?: number;
-}
-export interface popularMovieType {
-  page: number;
-  results: [popularMovieResultObj];
 }

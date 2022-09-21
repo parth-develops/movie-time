@@ -8,6 +8,8 @@ export const useProvideMovieContext = () => {
   const KEY = process.env.REACT_APP_TMBD_API_KEY;
 
   const fetchCurrentMovie = async (id: number) => {
+    console.log(id);
+    
     const movieResponse = await fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-US`
     );

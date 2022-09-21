@@ -15,7 +15,7 @@ interface YourComponentProps {
 }
 
 const MovieOfTheWeekBanner = ({ movieOfTheWeek }: YourComponentProps) => {
-  const { currentMovie, fetchCurrentMovie } = useCurrentMovieContext();
+  const { fetchCurrentMovie } = useCurrentMovieContext();
 
   return (
     <div className={styles.popularMovie}>
