@@ -1,3 +1,4 @@
+import { Genres } from "./type.d";
 export interface Genres {
   id: number;
   name: string;
@@ -19,8 +20,18 @@ export interface CurrentMovieContext {
 }
 // we cannot update methods in an object
 interface popularMovieResultObj {
-  title: string;
+  title?: string;
   vote_average?: number;
   poster_path?: string | null;
   id?: number;
 }
+export interface searchMovieResults {
+  title?: string;
+  genre_ids?: string;
+  poster_path?: string | null;
+  id?: number;
+}
+
+// export interface searchMovieResultsArrayType {
+//   []: searchMovieResults;
+// }

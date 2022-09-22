@@ -3,18 +3,17 @@
   color: var(--white);
   position: relative;
   margin: 1rem 1rem;
-  margin: 1rem 2rem;
   overflow: hidden;
   height: 70vh;
   border-radius: 5px;
-
 }
 
 .img {
   width: 100%;
   height: auto;
   border: none;
-  opacity: 0.55;
+  opacity: 0.5;
+  z-index: -100;
 }
 
 .movieInfo {
@@ -35,24 +34,32 @@
   font-size: 1rem;
   letter-spacing: 0.1rem;
   color: var(--white);
+  font-family: poppins;
+  display: none;
 }
 
 .HeaderMovieName {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+  font-family: poppins;
 }
 
 .HeaderParagraph {
-  font-family: inherit;
-  font-size: 0.90rem;
+  display: none;
+  font-family: poppins;
+  font-size: 0.9rem;
   width: 55%;
-  line-height: 150%;
+  line-height: 190%;
   margin-top: 0.5rem;
-  color: rgb(198, 194, 194);
+  font-weight: 400;
+
+  color: rgb(228, 228, 228);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .HeaderButton {
   padding: 0.5rem 1rem;
+  font-family: poppins;
   background-color: var(--red);
   border: none;
   color: var(--white);
@@ -90,14 +97,18 @@
   .HeaderHeadline {
     font-size: 1rem;
     letter-spacing: 0.1rem;
+    font-family: poppins;
   }
 
   .HeaderMovieName {
     font-size: 3rem;
     letter-spacing: 0.1rem;
+    font-family: poppins;
   }
 
   .HeaderParagraph {
     font-size: 0.9rem;
+    font-family: poppins;
+    display: inline;
   }
 }
