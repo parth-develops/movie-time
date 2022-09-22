@@ -13,14 +13,14 @@ function MovieCard({
   const { fetchCurrentMovie } = useCurrentMovieContext();
 
   return (
-    <Link to="/detail">
-      <div className={styles.movieCard} onClick={() => fetchCurrentMovie(id)}>
+    <div className={styles.movieCard} onClick={() => fetchCurrentMovie(id)}>
+      <Link to="/detail">
         <img
           className={styles.img}
           src={`https://image.tmdb.org/t/p/original${poster_path}`}
           alt=""
         />
-        <div>
+        <div className={styles.movieCardInfo}>
           <h1 className={styles.movieName}>{title}</h1>
           <p className={styles.rating}>
             <AiFillStar
@@ -33,8 +33,8 @@ function MovieCard({
             </span>
           </p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

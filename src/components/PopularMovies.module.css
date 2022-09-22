@@ -6,11 +6,13 @@
   align-items: center;
   margin-bottom: 2rem;
 }
+
 .popularMovieTitle {
   margin-left: 1rem;
   margin-top: 3rem;
   margin-bottom: 5rem;
 }
+
 .loadMore {
   padding: 0.8rem 1rem;
   background-color: var(--black);
@@ -23,43 +25,23 @@
   letter-spacing: 1px;
   margin-top: 3rem;
 }
+
 .popularMoviesRow {
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(1, auto);
-  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 3rem;
 }
 
-@media screen and (min-width: 640px) {
-  .popularMoviesRow {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .popularMoviesRow {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-  }
+.popularMovies a {
+  width: min-content;
+  text-decoration: none;
+  color: unset;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 480px) {
   .popularMoviesRow {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .popularMoviesRow {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(5, auto);
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
   }
 }

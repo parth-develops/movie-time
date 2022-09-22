@@ -1,5 +1,4 @@
 .popularMovie {
-  font-family: inherit;
   color: var(--white);
   position: relative;
   margin: 1rem 1rem;
@@ -27,6 +26,7 @@
 }
 
 .HeaderHeadline {
+  font-weight: 500;
   text-transform: uppercase;
   position: absolute;
   top: 5%;
@@ -35,24 +35,22 @@
   letter-spacing: 0.1rem;
   color: var(--white);
   font-family: poppins;
-  display: none;
 }
 
 .HeaderMovieName {
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
   font-family: poppins;
 }
 
 .HeaderParagraph {
-  display: none;
   font-family: poppins;
   font-size: 0.9rem;
   width: 55%;
   line-height: 190%;
   margin-top: 0.5rem;
   font-weight: 400;
-
   color: rgb(228, 228, 228);
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -75,40 +73,36 @@
   transition: 200ms;
 }
 
-@media screen and (min-width: 1024px) {
-  .HeaderHeadline {
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
-    position: absolute;
+@media screen and (max-width: 480px) {
+  .popularMovie {
+    height: auto;
+  }
+
+  .movieInfo {
+    align-items: center;
+    text-align: center;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .HeaderButton {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
   }
 
   .HeaderMovieName {
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    white-space: nowrap;
   }
 
   .HeaderParagraph {
-    font-size: 1rem;
-    font-family: inherit;
+    display: none;
   }
-}
-
-@media screen and (min-width: 768px) {
   .HeaderHeadline {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    font-family: poppins;
-  }
-
-  .HeaderMovieName {
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
-    font-family: poppins;
-  }
-
-  .HeaderParagraph {
-    font-size: 0.9rem;
-    font-family: poppins;
-    display: inline;
+    font-size: 0.85rem;
   }
 }
+
