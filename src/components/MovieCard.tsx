@@ -8,7 +8,7 @@ function MovieCard({
   title,
   vote_average,
   poster_path,
-  id = 0
+  id = 0,
 }: popularMovieResultObj) {
   const { fetchCurrentMovie } = useCurrentMovieContext();
 
@@ -28,7 +28,9 @@ function MovieCard({
               style={{ color: "yellow" }}
               className={styles.ratingLogo}
             />
-            <span className={styles.ratingNumber}>{vote_average?.toFixed(1)}</span>
+            <span className={styles.ratingNumber}>
+              {vote_average?.toFixed(1)}
+            </span>
           </p>
         </div>
       </div>

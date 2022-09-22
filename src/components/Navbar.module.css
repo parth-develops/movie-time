@@ -12,6 +12,7 @@
 .a {
   text-decoration: none;
   color: inherit;
+  font-family: poppins;
 }
 .li {
   cursor: pointer;
@@ -24,8 +25,9 @@
   width: 30vw;
   padding: 0.4rem;
   border-radius: 0.3rem;
-  border: solid 2px var(--black);
+  border-bottom: solid 2px var(--black);
   font-size: 0.8rem;
+  font-family: poppins;
 }
 .input:focus {
   outline: none;

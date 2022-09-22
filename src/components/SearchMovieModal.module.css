@@ -1,0 +1,28 @@
+.modal {
+  background: rgb(241, 239, 239);
+  height: 50vh;
+  width: 30vw;
+  border-radius: 0.2rem;
+  margin-top: 0.6rem;
+  z-index: 100;
+  position: absolute;
+}
+.movieCard {
+  overflow-y: scroll;
+  height: 50vh;
+}
+.movieCardItems {
+  padding: 0.4rem;
+  background: var(--red);
+  display: flex;
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+}
+.movieCardDetails {
+  padding: 0.5rem 1rem;
+}
+.moviePoster {
+  height: 8rem;
+  width: 6rem;
+  border-radius: 0.2rem;
+}

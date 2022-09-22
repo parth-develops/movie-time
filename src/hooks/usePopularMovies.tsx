@@ -15,9 +15,12 @@ export const usePopularMovies = () => {
       );
       const popularMovies = await popularMoviesResponse.json();
       const { page, results } = popularMovies;
-      console.log(popularMovies);
+      // console.log(popularMovies);
 
-      setPopularMovieResults((prevResults): any => [...prevResults, ...results]);
+      setPopularMovieResults((prevResults): any => [
+        ...prevResults,
+        ...results,
+      ]);
       setPageNum(page);
     };
 
