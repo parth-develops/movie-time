@@ -1,22 +1,64 @@
 .modal {
-  background: rgb(241, 239, 239);
+  background: #0c111b;
   height: 50vh;
-  width: 30vw;
+  width: 25vw;
   border-radius: 0.2rem;
   margin-top: 0.6rem;
   z-index: 100;
   position: absolute;
+  overflow: hidden;
 }
 .movieCard {
-  overflow-y: scroll;
   height: 50vh;
+  overflow: scroll;
+}
+/* hide scroll bar for chrome Safari and Opera  */
+.movieCard::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.movieCard {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.movieTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+AiFillStar {
+  color: yellow;
+  font-size: 2rem;
+  display: inline;
+}
+.vote {
+  font-family: poppins;
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.rating {
+  margin-top: 0.5rem;
+  display: flex;
+  font-family: poppins;
+  align-items: center;
+}
+.releaseDate {
+  font-family: poppins;
+  margin-top: 0.5rem;
+  color: rgb(239, 237, 237);
+  font-size: 0.9rem;
 }
 .movieCardItems {
   padding: 0.4rem;
-  background: var(--red);
+  background: #192133;
   display: flex;
   margin: 0.5rem;
   border-radius: 0.2rem;
+  cursor: pointer;
+}
+.movieCardItems:hover {
+  background: #070a10;
+  transition: 200ms;
 }
 .movieCardDetails {
   padding: 0.5rem 1rem;

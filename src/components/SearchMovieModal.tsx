@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillStar } from "react-icons/ai";
 import styles from "./SearchMovieModal.module.css";
 
 const SearchMovieModule = ({ movieResults }: any) => {
@@ -14,13 +15,16 @@ const SearchMovieModule = ({ movieResults }: any) => {
                 className={styles.moviePoster}
               />
               <div className={styles.movieCardDetails}>
-                <h1>{movieResult.title}</h1>
-
-                {/* <p>
-                  {movieResult.genre_ids.map((id: number, index: number) => (
-                    <span key={index}>{id}</span>
-                  ))}
-                </p> */}
+                <h1 className={styles.movieTitle}>{movieResult.title}</h1>
+                <p className={styles.releaseDate}>{movieResult.release_date}</p>
+                <p className={styles.rating}>
+                  <AiFillStar
+                    size={20}
+                    style={{ color: "yellow" }}
+                    className={styles.ratingLogo}
+                  />
+                  <p className={styles.vote}>{movieResult.vote_average} / 10</p>
+                </p>
               </div>
             </div>
           );
