@@ -16,6 +16,7 @@
 }
 
 .movieInfo {
+  width: 100%;
   position: absolute;
   bottom: 10%;
   left: 2%;
@@ -38,7 +39,7 @@
 }
 
 .HeaderMovieName {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
   font-family: poppins;
@@ -73,7 +74,7 @@
   transition: 200ms;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .popularMovie {
     height: auto;
   }
@@ -93,9 +94,7 @@
   }
 
   .HeaderMovieName {
-    font-weight: 500;
     font-size: 1.5rem;
-    white-space: nowrap;
   }
 
   .HeaderParagraph {
@@ -103,6 +102,33 @@
   }
   .HeaderHeadline {
     font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .popularMovie {
+    height: auto;
+  }
+
+  .movieInfo {
+    align-items: center;
+    text-align: center;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .movieInfo, .HeaderParagraph {
+    width: 97%;
+    display: block;
+  }
+
+  .HeaderMovieName {
+    font-size: 1.8rem;
+  }
+
+  .HeaderButton {
+    margin-top: 1.3rem;
   }
 }
 

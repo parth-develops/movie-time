@@ -9,11 +9,12 @@ const SearchMovieModule = ({ movieResults }: any) => {
         {movieResults?.map((movieResult: any) => {
           return (
             <div className={styles.movieCardItems} key={movieResult.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/original${movieResult.poster_path}`}
-                alt={movieResults.poster_path}
-                className={styles.moviePoster}
-              />
+              <div className={styles.searchResultsPoster}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${movieResult.poster_path}`}
+                  alt={movieResults.poster_path}
+                />
+              </div>
               <div className={styles.movieCardDetails}>
                 <h1 className={styles.movieTitle}>{movieResult.title}</h1>
                 <p className={styles.releaseDate}>{movieResult.release_date}</p>

@@ -15,11 +15,13 @@ function MovieCard({
   return (
     <div className={styles.movieCard} onClick={() => fetchCurrentMovie(id)}>
       <Link to="/detail">
-        <img
-          className={styles.img}
-          src={`https://image.tmdb.org/t/p/original${poster_path}`}
-          alt=""
-        />
+        <div className={styles.imgContainer}>
+          <img
+            className={styles.img}
+            src={`https://image.tmdb.org/t/p/original${poster_path}`}
+            alt=""
+          />
+        </div>
         <div className={styles.movieCardInfo}>
           <h1 className={styles.movieName}>{title}</h1>
           <p className={styles.rating}>
