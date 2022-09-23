@@ -3,6 +3,9 @@ import styles from "./Navbar.module.css";
 import SearchMovieModal from "../components/SearchMovieModal";
 import { searchMovieResults } from "../type";
 
+// react icons
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+
 function Navbar() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [movieResults, setMovieResults] = useState<searchMovieResults>();
@@ -25,20 +28,28 @@ function Navbar() {
     fetchSearchMovies();
   }, [searchQuery]);
 
+  const closeModal = () => {
+    setSearchQuery("");
+  };
   return (
     <nav className={styles.nav}>
       <a className={styles.a} href="/">
         MovieTime
       </a>
 
-      <div>
+      <div className={styles.search}>
         <input
           className={styles.input}
-          type="search"
-          placeholder="Search movie"
+          type="text"
+          placeholder="Search"
           value={searchQuery}
           onChange={(event) => handelChange(event)}
         />
+        {searchQuery ? (
+          <AiOutlineClose onClick={closeModal} className={styles.icon} />
+        ) : (
+          <AiOutlineSearch className={styles.icon} />
+        )}
         {searchQuery && <SearchMovieModal movieResults={movieResults} />}
       </div>
     </nav>
