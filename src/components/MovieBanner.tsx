@@ -6,10 +6,13 @@ const MovieBanner = () => {
 
   return (
     <section className={classes["movie-banner"]}>
-      <img
-        src={`https://image.tmdb.org/t/p/original${currentMovie?.movieBanner}`}
-        alt={`${currentMovie?.movieTitle} Banner`}
-      />
+      <div className={classes.bannerWrapper}>
+        <img
+          loading="lazy"
+          src={`https://image.tmdb.org/t/p/original${currentMovie?.movieBanner}`}
+          alt={`${currentMovie?.movieTitle} Banner`}
+        />
+      </div>
     </section>
   );
 };

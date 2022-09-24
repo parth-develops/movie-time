@@ -22,7 +22,7 @@
   transition: 200ms;
 }
 .input {
-  width: 25vw;
+  width: 400px;
   border: none;
   font-size: 0.8rem;
   font-family: poppins;
@@ -44,14 +44,16 @@
   right: 0.5rem;
   cursor: pointer;
 }
-.ul {
-  display: flex;
-  gap: 1rem;
-  list-style-type: none;
-  font-family: inherit;
+
+
+@media screen and (max-width: 480px) {
+  .input {
+    width: 160px;
+  }
 }
-@media screen and (min-width: 768px) {
-  .ul {
-    gap: 3rem;
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .input {
+    width: 320px;
   }
 }

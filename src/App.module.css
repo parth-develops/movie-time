@@ -5,6 +5,7 @@
 
 section {
   margin: 108px 0;
+  padding: 0 2rem;
 }
 
 section:first-child {
@@ -12,4 +13,11 @@ section:first-child {
 }
 section:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 54px 0;
+    padding: 0 1rem;
+  }
 }

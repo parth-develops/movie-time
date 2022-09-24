@@ -1,10 +1,23 @@
 .movie-banner {
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.movie-banner img {
-  max-width: 1280px;
+.bannerWrapper {
+  max-width: 1400px;
   max-height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bannerWrapper img {
+  object-position: bottom;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  
 }

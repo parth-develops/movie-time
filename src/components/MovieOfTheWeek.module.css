@@ -5,6 +5,9 @@
   overflow: hidden;
   height: 70vh;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img {
@@ -13,6 +16,7 @@
   border: none;
   opacity: 0.5;
   z-index: -100;
+  align-self: baseline;
 }
 
 .movieInfo {

@@ -1,12 +1,13 @@
 .modal {
   background: #0c111b;
   height: 50vh;
-  width: 25vw;
+  width: 400px;
   border-radius: 0.2rem;
   margin-top: 0.6rem;
   z-index: 100;
   position: absolute;
   overflow: hidden;
+  right: 0;
 }
 
 .movieCard {
@@ -78,11 +79,18 @@ AiFillStar {
 
 .searchResultsPoster {
   width: 6rem;
+  height: 9rem;
 }
 
 .searchResultsPoster img {
-  height: fit-content;
   border-radius: 5px;
-  width: 100%;
+  width: inherit;
+  height: inherit;
   object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 320px;
+  }
 }

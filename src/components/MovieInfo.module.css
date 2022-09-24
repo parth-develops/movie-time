@@ -1,8 +1,11 @@
 .movie-info-container {
   display: flex;
-  gap: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   max-width: 1280px;
   margin: auto;
+  padding-bottom: 4rem;
 }
 
 .movie-poster {
@@ -10,16 +13,20 @@
 }
 
 .movie-poster img {
+  border-radius: 5px;
   width: 100%;
+  object-fit: contain;
 }
 
 .movie-details {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .genres {
   display: flex;
-  gap: 8px;
+  gap: 0.9rem;
 }
 
 .genres li {
@@ -35,6 +42,16 @@ ul {
   list-style: none;
 }
 
+.ratingLogo {
+  display: inline;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .movie-title {
   font-size: 48px;
   font-weight: 500;
@@ -43,8 +60,61 @@ ul {
 h4 {
   font-size: 26px;
   font-weight: 500;
+  margin-bottom: 0.8rem;
+  text-transform: capitalize;
 }
 
 .movie-details >:not(:last-child) {
   padding-bottom: 24px;
-} 
+}
+
+@media (max-width: 768px) {
+  .movie-info-container {
+    flex-direction: column;
+  }
+
+  .movie-details {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: self-start;
+  }
+
+  .movie-poster {
+    width: 50%;
+  }
+  
+  .movie-details {
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  p, li {
+    font-size: 0.8rem;
+  }
+
+  .genres li {
+    padding: 3px 7px;
+  }
+
+  .movie-details >:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .movie-title {
+    font-size: 1.8rem;
+  }
+
+  .movie-info-container {
+    gap: 2rem;
+  }
+}

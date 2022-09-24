@@ -44,6 +44,11 @@ button {
   font-family: var(--font-raleway);
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 body {
   background-image: radial-gradient(65% 50% at bottom center,
       var(--red),

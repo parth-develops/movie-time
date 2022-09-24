@@ -7,7 +7,7 @@ import { searchMovieResults } from "../type";
 import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 
 function Navbar() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>();
   const [movieResults, setMovieResults] = useState<searchMovieResults>();
 
   const handelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +21,6 @@ function Navbar() {
       const searchedMovies = await searchMovieResponse.json();
       const { results } = searchedMovies;
 
-      // const { title, genre_ids, poster_path, id } = results;
       setMovieResults(results);
     };
 
@@ -41,7 +40,7 @@ function Navbar() {
         <input
           className={styles.input}
           type="text"
-          placeholder="Search"
+          placeholder="Search Movie"
           value={searchQuery}
           onChange={(event) => handelChange(event)}
         />
@@ -50,7 +49,7 @@ function Navbar() {
         ) : (
           <AiOutlineSearch className={styles.icon} />
         )}
-        {searchQuery && <SearchMovieModal movieResults={movieResults} />}
+        {searchQuery && <SearchMovieModal movieResults={movieResults} onCloseModal={closeModal}/>}
       </div>
     </nav>
   );

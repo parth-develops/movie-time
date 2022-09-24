@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   width: min-content;
-  align-self: baseline;
+  align-self: flex-start;
 }
 
 .movieCard:hover {
