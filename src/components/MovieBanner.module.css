@@ -5,10 +5,11 @@
 }
 
 .bannerWrapper {
+  display: flex;
   max-width: 1400px;
   max-height: 500px;
-  border-radius: 5px;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .bannerWrapper img {

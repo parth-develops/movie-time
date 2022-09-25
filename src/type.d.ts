@@ -17,6 +17,8 @@ export interface CurrentMovie {
 export interface CurrentMovieContext {
   currentMovie?: CurrentMovie;
   fetchCurrentMovie: (id: number) => Promise<void>;
+  isMovieLoading: boolean;
+  errorMsg: string | null;
 }
 // we cannot update methods in an object
 interface popularMovieResultObj {

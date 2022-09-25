@@ -3,6 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { popularMovieResultObj } from "../type";
 import { useCurrentMovieContext } from "./contexts";
 import { Link } from "react-router-dom";
+import useScrollToTop from "../hooks/useScrollToTop";
 
 function MovieCard({
   title,
@@ -11,9 +12,10 @@ function MovieCard({
   id = 0,
 }: popularMovieResultObj) {
   const { fetchCurrentMovie } = useCurrentMovieContext();
+  const scrollToTop = useScrollToTop();
 
   return (
-    <div className={styles.movieCard} onClick={() => fetchCurrentMovie(id)}>
+    <div className={styles.movieCard} onClick={() => {fetchCurrentMovie(id); scrollToTop();}}>
       <Link to="/detail">
         <div className={styles.imgContainer}>
           <img
